@@ -1,0 +1,33 @@
+name = "my-deerflow"
+main = "worker/index.js"
+compatibility_date = "2026-05-07"
+workers_dev = true
+routes = [
+  { pattern = "deerflow.site/*", zone_name = "deerflow.site" },
+  { pattern = "www.deerflow.site/*", zone_name = "deerflow.site" }
+]
+
+[vars]
+CREEM_API_BASE = "https://api.creem.io"
+CREEM_ENV = "live"
+
+[assets]
+directory = "./dist"
+binding = "SITE_ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = [
+  "/",
+  "/deer-flow-ai",
+  "/deer-flow-vs-openclaw",
+  "/deer-flow-docker",
+  "/deer-flow-github",
+  "/deer-flow-reddit",
+  "/deer-flow-bytedance",
+  "/deer-flow-2-0-github",
+  "/pricing",
+  "/privacy",
+  "/terms",
+  "/sitemap.xml",
+  "/robots.txt",
+  "/api/*"
+]

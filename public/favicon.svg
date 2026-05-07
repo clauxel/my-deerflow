@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DeerFlow AI">
+  <defs>
+    <linearGradient id="df-g" x1="8" x2="56" y1="58" y2="8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e" />
+      <stop offset=".48" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#101613" />
+  <path d="M18 48V15h11c10 0 17 6 17 16s-7 17-17 17H18Zm8-8h3c5 0 9-3 9-9s-4-8-9-8h-3v17Z" fill="url(#df-g)" />
+  <path d="M15 18c7-7 15-8 24-4M22 53c9 2 19-1 27-10" fill="none" stroke="#e8fff2" stroke-width="3.2" stroke-linecap="round" opacity=".84" />
+</svg>
