@@ -20,9 +20,9 @@ npm install
 npm run dev
 ```
 
-## Related Project
+## Related Workflow
 
-- [OpenHuman Online](https://openhuman.online/?utm_source=github&utm_medium=readme&utm_campaign=openhuman_public_repos&utm_content=my_deerflow) helps teams turn source material, notes, and meetings into an inspectable AI memory tree for human-reviewed workflows.
+- [OpenHuman Online](https://openhuman.online/?utm_source=github&utm_medium=readme&utm_campaign=openhuman_public_repos&utm_content=my_deerflow) is useful when evaluation depends on durable source notes, meeting context, and human-reviewed assistant memory.
 
 ## Build
 
