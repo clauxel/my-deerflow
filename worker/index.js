@@ -40,6 +40,8 @@ const indexablePaths = [
   '/deer-flow-bytedance',
   '/deer-flow-2-0-github',
   '/pricing',
+  '/checkout',
+  '/deerflow-ai-research-agent',
   '/privacy',
   '/terms',
 ]
@@ -363,6 +365,10 @@ function noIndexNotFoundResponse(request) {
   return new Response('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><title>Page not found</title></head><body><main><h1>Page not found</h1><p>This URL is not a public page for this product.</p></main></body></html>', { status: 404, headers })
 }
 
+function isFileAssetPath(pathname) {
+  return pathname.startsWith('/assets/') || pathname.startsWith('/_next/') || /\.[a-z0-9]{2,12}$/i.test(pathname)
+}
+
 async function fetchAsset(request, env) {
   if (env?.SITE_ASSETS?.fetch) {
     const requestUrl = new URL(request.url)
@@ -370,12 +376,17 @@ async function fetchAsset(request, env) {
 
     if (staticAssetPaths.has(normalizedPath)) {
       const assetUrl = new URL(request.url)
-      assetUrl.pathname = normalizedPath === '/' ? '/' : `${normalizedPath}/index.html`
+      assetUrl.pathname = normalizedPath === '/' ? '/' : `${normalizedPath}/`
       const assetResponse = await env.SITE_ASSETS.fetch(new Request(assetUrl.toString(), request))
       if (assetResponse.status !== 404) return assetResponse
     }
 
-    return env.SITE_ASSETS.fetch(request)
+    const assetResponse = await env.SITE_ASSETS.fetch(request)
+    if (assetResponse.status === 404) return noIndexNotFoundResponse(request)
+    if (assetResponse.status === 200 && !staticAssetPaths.has(normalizedPath) && !isFileAssetPath(normalizedPath)) {
+      return noIndexNotFoundResponse(request)
+    }
+    return assetResponse
   }
 
   return new Response('Cloudflare asset binding is unavailable.', {

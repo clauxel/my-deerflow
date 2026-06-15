@@ -21,3 +21,10 @@ Verification: ran the shared SEO/GEO patrol fixer from the latest all-sites chec
 Deploy/Git status: pending commit, push, deploy, and post-deploy checklist rerun.
 
 Follow-ups: re-run the all-sites SEO/GEO + build checklist after production deployment and keep any DNS/account-only blockers in the issue ledger.
+
+## 2026-06-12 exposure rescue pages
+
+- Added AI-readable and human-useful static intent pages for uncovered traffic terms: `DeerFlow AI research agent`.
+- Replaced the old hidden SEO answer block with a readable first-packet fallback inside `#root` where an index shell exists.
+- Refreshed pricing, checkout fallback, privacy, terms, sitemap, robots, and llms surfaces for the exposure-click rescue checklist.
+- Verification pending: rebuild/deploy and rerun the exposure rescue checklist.

@@ -1,0 +1,23 @@
+# DeerFlow Site
+
+Updated: 2026-06-12
+Canonical: https://deerflow.site/
+Support: support@aigeamy.com
+
+## Summary
+DeerFlow Site is a Managed DeerFlow AI research agent workspace for teams planning deep research agent runs, coding missions, and approval checkpoints. It helps users get a mission-ready DeerFlow workflow with pricing, examples, privacy, and not-found safety.
+
+## Core pages
+- Home: https://deerflow.site/
+- Pricing: https://deerflow.site/pricing/
+- Checkout fallback: https://deerflow.site/checkout/
+- Privacy: https://deerflow.site/privacy/
+- Terms: https://deerflow.site/terms/
+
+## Traffic intent pages
+- DeerFlow AI research agent: https://deerflow.site/deerflow-ai-research-agent/ - DeerFlow AI Research Agent Workflow
+
+## Pricing anchors
+- Lab: $39/mo public planning anchor
+- Flow: $99/mo public planning anchor
+- Ops: $249/mo public planning anchor

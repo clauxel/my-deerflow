@@ -3,9 +3,9 @@ import type { RouteView } from './routing'
 
 const liveOrigin = 'https://deerflow.site'
 const siteName = 'DeerFlow AI'
-const defaultTitle = 'DeerFlow AI | Managed Deer Flow Agent Workspace'
+const defaultTitle = 'DeerFlow Site - Managed Deer Flow Agent Workspace for Research and Coding'
 const defaultDescription =
-  'DeerFlow AI turns DeerFlow-style sub-agents, memory, skills, tools, and sandbox execution into a managed workspace for long-horizon research, coding, and operations.'
+  'Use DeerFlow AI as a managed Deer Flow workspace for sub-agents, memory, skills, tools, sandbox execution, long-horizon research, coding, and operations.'
 
 const canonicalLinkId = 'deerflow-canonical-link'
 const structuredDataScriptId = 'deerflow-structured-data'
