@@ -59,7 +59,7 @@ export const keywordPages: KeywordPage[] = [
         heading: 'The buying path',
         paragraphs: [
           'Flow annual is selected by default because most real DeerFlow AI evaluations need more than a tiny demo but do not need enterprise private runners on day one.',
-          'Checkout opens in a centered Creem popup. The original DeerFlow site stays visible behind a blurred backdrop, which keeps the decision context in place while payment is completed.',
+          'Checkout opens in a centered Polar popup. The original DeerFlow site stays visible behind a blurred backdrop, which keeps the decision context in place while payment is completed.',
         ],
       },
     ],
@@ -77,7 +77,7 @@ export const keywordPages: KeywordPage[] = [
       {
         question: 'Why does checkout stay in a popup?',
         answer:
-          'It lets the buyer keep the product page, plan context, and trust signals open while finishing the hosted Creem payment.',
+          'It lets the buyer keep the product page, plan context, and trust signals open while finishing the hosted Polar payment.',
       },
     ],
   },
@@ -191,7 +191,7 @@ export const keywordPages: KeywordPage[] = [
       {
         question: 'Does checkout require leaving the page?',
         answer:
-          'No. Creem checkout opens in a centered popup while the DeerFlow AI pricing page stays visible.',
+          'No. Polar checkout opens in a centered popup while the DeerFlow AI pricing page stays visible.',
       },
     ],
   },
@@ -249,7 +249,7 @@ export const keywordPages: KeywordPage[] = [
       {
         question: 'What is the next step after GitHub review?',
         answer:
-          'Use the homepage mission planner, confirm the default Flow annual plan, then open the Creem checkout popup when the fit is clear.',
+          'Use the homepage mission planner, confirm the default Flow annual plan, then open the Polar checkout popup when the fit is clear.',
       },
     ],
   },
@@ -341,7 +341,7 @@ export const keywordPages: KeywordPage[] = [
         heading: 'A good first mission',
         paragraphs: [
           'Pick one mission that is useful but bounded: a research brief, a repository change, a report pipeline, or an operations triage workflow. Give it explicit tools and approval points.',
-          'If the mission planner returns a good fit, Flow annual is the recommended default and checkout stays in a centered Creem popup.',
+          'If the mission planner returns a good fit, Flow annual is the recommended default and checkout stays in a centered Polar popup.',
         ],
       },
     ],

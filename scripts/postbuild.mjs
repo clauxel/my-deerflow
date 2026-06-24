@@ -232,7 +232,7 @@ function buildHomePrerender() {
         <div>
           <p class="df-eyebrow">DeerFlow AI managed workspace</p>
           <h1>Turn long agent runs into work your team can trust.</h1>
-          <p class="df-lede">Plan DeerFlow and deer flow style work, choose Flow annual, and open secure Creem checkout without losing the page context.</p>
+          <p class="df-lede">Plan DeerFlow and deer flow style work, choose Flow annual, and open secure Polar checkout without losing the page context.</p>
           <p><a class="df-btn df-btn-primary" href="/pricing">Choose Flow annual</a></p>
         </div>
       </section>

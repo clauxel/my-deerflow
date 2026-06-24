@@ -99,7 +99,7 @@ const proofItems = [
   { label: 'Upstream signal', value: '65k+', detail: 'GitHub stars on the public ByteDance DeerFlow repository' },
   { label: 'Default plan', value: 'Flow', detail: 'Middle tier selected before checkout' },
   { label: 'Annual savings', value: '50%', detail: 'Annual billing is active by default' },
-  { label: 'Payment flow', value: 'Popup', detail: 'Creem opens centered while the page stays visible' },
+  { label: 'Payment flow', value: 'Popup', detail: 'Polar opens centered while the page stays visible' },
 ]
 
 const workflowCards = [
@@ -120,7 +120,7 @@ const workflowCards = [
   },
   {
     title: 'Checkout without losing context',
-    body: 'Payment opens in a centered Creem window, with the original plan page blurred in the background.',
+    body: 'Payment opens in a centered Polar window, with the original plan page blurred in the background.',
     icon: <BadgeCheck size={21} />,
   },
 ]
@@ -172,7 +172,7 @@ const legalTermsSections = [
   {
     title: 'Payments and returns',
     paragraphs: [
-      'Payments are processed by Creem in a hosted popup window. Successful checkouts return the user to the homepage.',
+      'Payments are processed by Polar in a hosted popup window. Successful checkouts return the user to the homepage.',
       'Displayed annual pricing reflects a 50% discount versus the monthly run-rate for the same plan.',
     ],
   },
@@ -398,7 +398,7 @@ export default function App() {
     trackEvent('mission_planner_change', { key, value })
   }
 
-  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'creem') {
+  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'polar') {
     setSelectedPlanId(planId)
     setBilling(nextBilling)
     setCheckoutLoadingKey(loadingKey)
@@ -408,7 +408,7 @@ export default function App() {
     const popup = openCenteredCheckoutWindow()
 
     try {
-      const url = await createCheckoutSession(planId, nextBilling, provider === 'nowpayments' ? '/api/nowpayments-checkout' : '/api/checkout')
+      const url = await createCheckoutSession(planId, nextBilling, provider === 'polar' ? '/api/polar-checkout' : '/api/checkout')
       const popupOpened = sendPopupToCheckout(popup, url)
       if (!popupOpened) {
         try {
@@ -535,7 +535,7 @@ export default function App() {
           {checkoutUrl ? (
             <div className="df-checkout-copy">
               <p className="df-eyebrow">Secure checkout</p>
-              <h2 id="checkout-title">Creem checkout opened.</h2>
+              <h2 id="checkout-title">Polar checkout opened.</h2>
               <p className="df-muted">
                 Complete payment in the centered popup. This page stays in place and returns to the homepage after success.
               </p>
@@ -558,7 +558,7 @@ export default function App() {
               <p className="df-eyebrow">Popup needed</p>
               <h2 id="checkout-title">Checkout could not open yet.</h2>
               <p className="df-muted">
-                Allow the payment popup and try again. DeerFlow AI keeps payment in a separate Creem window so the original page is not replaced.
+                Allow the payment popup and try again. DeerFlow AI keeps payment in a separate Polar window so the original page is not replaced.
               </p>
               <div className="df-checkout-actions">
                 <button
@@ -769,7 +769,7 @@ export default function App() {
                 <button
                   type="button"
                   className="df-btn df-btn-ghost"
-                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'nowpayments')}
+                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'polar')}
                   disabled={checkoutLoadingKey !== null}
                 >
                   {checkoutLoadingKey === `${loadingKey}-wallet` ? 'Opening USDC wallet...' : 'Pay with USDC Wallet'}
@@ -793,7 +793,7 @@ export default function App() {
           </article>
           <article>
             <h3>Does payment replace this page?</h3>
-            <p>No. Checkout opens in a centered Creem popup and the product page stays visible behind a blurred overlay.</p>
+            <p>No. Checkout opens in a centered Polar popup and the product page stays visible behind a blurred overlay.</p>
           </article>
         </div>
       ) : null}
@@ -874,7 +874,7 @@ export default function App() {
             <div className="df-hero-proof">
               <div>
                 <span>Default path</span>
-                <strong>Mission planner to Flow annual to Creem popup to homepage return</strong>
+                <strong>Mission planner to Flow annual to Polar popup to homepage return</strong>
               </div>
               <div>
                 <span>Best-fit work</span>
@@ -1033,7 +1033,7 @@ export default function App() {
           <div>
             <p className="df-eyebrow">Recommended next step</p>
             <h2>Use the planner first, then keep Flow annual selected if the mission fit is clear.</h2>
-            <p>Checkout stays in a centered Creem popup, with annual billing selected by default.</p>
+            <p>Checkout stays in a centered Polar popup, with annual billing selected by default.</p>
           </div>
           <div className="df-article-cta-actions">
             <button type="button" className="df-btn df-btn-primary" onClick={() => chooseFlowAnnual(`article-${page.path}`)}>
